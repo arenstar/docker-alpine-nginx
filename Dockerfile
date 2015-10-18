@@ -18,6 +18,7 @@ RUN ./configure \
     --error-log-path=/var/log/nginx/error.log \
     --lock-path=/var/lock/nginx.lock \
     --pid-path=/run/nginx.pid \
+    --http-client-body-temp-path=/tmp \
     --with-threads \
     --with-pcre-jit \
     --with-ipv6 \
