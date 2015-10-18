@@ -33,7 +33,7 @@ RUN ./configure \
 
 RUN make && make install
 
-RUN apk del pcre-dev openssl-dev make git curl g++ && rm -rf /var/cache/apk/*
+RUN apk del pcre-dev openssl-dev make git curl g++ && rm -rf /var/cache/apk/* /tmp/nginx-*
 
 RUN ln -sf /dev/stdout /var/log/nginx/access.log
 RUN ln -sf /dev/stderr /var/log/nginx/error.log
